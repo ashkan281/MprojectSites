@@ -9,15 +9,15 @@
    <meta name="description" content="">
 
    <!-- Site Title -->
-   <title>mysite</title>
+   <title>MySites</title>
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="apple-touch-icon" href="{% static 'assets/img/favicon.png' %}">
-   <link rel="shortcut icon" type="{% static 'image/png' %}" href="{% static 'assets/img/favicon.png'%}">
+   <link rel="apple-touch-icon" href="assets/img/favicon.png">
+   <link rel="shortcut icon" type="image/png" href="{% static "assets/img/favicon.png" %}">
 
    <!-- CSS here -->
-   <link rel="stylesheet" href="assets/css/animate.min.css">
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{% static "assets/css/animate.min.css" %}">
+   <link rel="stylesheet" href="{% static "assets/css/bootstrap.min.css"%}">
    <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css">
    <link rel="stylesheet" href="assets/css/flaticon_gerold.css">
    <link rel="stylesheet" href="assets/css/nice-select.css">
@@ -26,7 +26,7 @@
    <link rel="stylesheet" href="assets/css/swiper.min.css">
    <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-   <link rel="stylesheet" href="assets/css/main.css">
+   <link rel="stylesheet" href="{% static "assets/css/main.css" %}">
    <link rel="stylesheet" href="assets/css/light-mode.css">
    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -1234,7 +1234,7 @@
    <!-- FOOTER AREA END -->
 
    <!-- CSS here -->
-   <script src="assets/js/jquery.min.js"></script>
+   <script src="{% static 'assets/js/jquery.min.js'%}"></script>
    <script src="assets/js/bootstrap.bundle.min.js"></script>
    <script src="assets/js/nice-select.min.js"></script>
    <script src="assets/js/backToTop.js"></script>

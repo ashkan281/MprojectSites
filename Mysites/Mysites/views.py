@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from projects_app.models import FormProject
 from Form.models import message
 
@@ -12,6 +11,7 @@ def show_home(request):
         email = request.POST.get('email')
         number = request.POST.get('number')
         sub = request.POST.get('sub')
+    
         message.objects.create(name=name , namefamily=namefamily , email=email , number=number , sub=sub)
     
     

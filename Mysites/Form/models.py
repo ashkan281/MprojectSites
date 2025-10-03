@@ -13,6 +13,6 @@ class message(models.Model):
     
     
     def __str__(self):
-        return f"{self.name} - {self.namefamily}"
+        return f"{self.name}  {self.namefamily}"
     
     

@@ -53,7 +53,7 @@
                   </nav>
                </div>
                <div class="header-button">
-                  <a href="#" class="btn tj-btn-primary">تماس با من</a>
+                  <a href="#contact-section" class="btn tj-btn-primary">تماس با من</a>
                </div>
                <div class="menu-bar d-lg-none">
                   <button>
@@ -94,9 +94,9 @@
                   </nav>
                </div>
 
-               <div class="header-button">
+               {% comment %} <div class="header-button">
                   <a href="#" class="btn tj-btn-primary">تماس با من</a>
-               </div>
+               </div> {% endcomment %}
 
                <div class="menu-bar d-lg-none">
                   <button>
@@ -154,25 +154,25 @@
                <div class="row">
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="3">0</span>سال</div>
+                        <div class="number"><span class="odometer" data-count="1">0</span>سال</div>
                         <div class="text">سابقه <br>کاری</div>
                      </div>
                   </div>
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="3">0</span>+</div>
+                        <div class="number"><span class="odometer" data-count="2">0</span>+</div>
                         <div class="text">پروژه های <br>تکمیل شده</div>
                      </div>
                   </div>
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="0">0</span>K</div>
+                        <div class="number"><span class="odometer" data-count="zero">0</span>K</div>
                         <div class="text">میزان <br>رضایت</div>
                      </div>
                   </div>
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="0">0</span></div>
+                        <div class="number"><span class="odometer" data-count="zero">0</span></div>
                         <div class="text">سال های <br>تجربیات</div>
                      </div>
                   </div>
@@ -380,15 +380,18 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="section-header text-center">
-                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">پروژه های اخیر</h2>
+                     <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">پروژه های شخصی </h2>
                      <p class="wow fadeInUp" data-wow-delay=".4s">
-                        این پروژه ها برای تمرین و رزومه هستش خوشحال میشم درموردشون نظر و یا توسعه دهید 
+                        این پروژه ها برای تمرین و رزومه هستش خوشحال میشم درموردشون نظر دهید 
                      </p>
                   </div>
                </div>
             </div>
 
             <div class="row">
+                  <!-- 
+               inja braye ghesmat project hastesh 
+                  -->
                <div class="col-md-12">
                   <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
                      <div class="button-group filter-button-group">
@@ -399,19 +402,23 @@
                   <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
                      <div class="portfolio-sizer"></div>
                      <div class="gutter-sizer"></div>
+                     {% for show in formproject%}
                      <div class="portfolio-item branding">
                         <div class="image-box">
-                           <img src="assets/img/hero/ashkanresize.png" alt="">
+                           <img src="{{ show.image.url }}" alt="">
                         </div>
                         <div class="content-box">
-                           <h3 class="portfolio-title">password generate </h3>
-                           <p>در سریع ترین زمان بهترین پسوورد رو استفاده کن . </p>
+                           <h3 class="portfolio-title">{{ show.title}} </h3>
+                           <p>{{ show.description}} </p>
                            <i class="flaticon-up-right-arrow"></i>
                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
                         </div>
                      </div>
+                     {%endfor %}
                </div>
+
             </div>
+
          </div>
       </section>
       <!-- PORTFOLIO SECTION END -->
@@ -648,6 +655,15 @@
                         </div>
                         <p>ccna 200-301 </p>
                      </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
+                        <div class="skill-inner">
+                           <div class="icon-box">
+                              <img src="assets/img/icons/output.svg" alt="">
+                           </div>
+                           <div class="number">40%</div>
+                        </div>
+                        <p>django</p>
+                     </div>
                   </div>
                </div>
             </div>
@@ -725,53 +741,47 @@
       <!-- BLOG SECTION END -->
 
       <!-- CONTACT SECTION START -->
+
+
+
       <section class="contact-section" id="contact-section">
          <div class="container">
             <div class="row">
                <div class="col-lg-6 col-md-7 order-2 order-md-1">
                   <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
                      <div class="section-header">
-                        <h2 class="section-title">همکاری با ما</h2>
+                        <h2 class="section-title"> نظرات ها  </h2>
                         <p> این سایت بیشتر جنبه جمع بندی مهارت هام و رزومه های بنده هستش ممنون میشم نظر خودتون رو برام ایمیل کنید .</p>
                      </div>
 
                      <div class="tj-contact-form">
-                        <form id="contact-form">
+                        <form id="contact-form" method="post">
+                           {% csrf_token %}
                            <div class="row gx-3">
                               <div class="col-sm-6">
                                  <div class="form_group">
-                                    <input type="text" name="conName" id="conName" placeholder="نام" autocomplete="off">
+                                    <input type="text" name="name" id="conName" placeholder="نام" autocomplete="off">
                                  </div>
                               </div>
                               <div class="col-sm-6">
                                  <div class="form_group">
-                                    <input type="text" name="conLName" id="conLName" placeholder="نام خانوادگی" autocomplete="off">
+                                    <input type="text" name="namefamily" id="conLName" placeholder="نام خانوادگی" autocomplete="off">
                                  </div>
                               </div>
                               <div class="col-sm-6">
                                  <div class="form_group">
-                                    <input type="email" name="conEmail" id="conEmail" placeholder="ایمیل" autocomplete="off">
+                                    <input type="email" name="email" id="conEmail" placeholder="ایمیل" autocomplete="off">
                                  </div>
                               </div>
                               <div class="col-sm-6">
                                  <div class="form_group">
-                                    <input type="tel" name="conPhone" id="conPhone" placeholder="شماره تماس" autocomplete="off">
+                                    <input type="tel" name="number" id="conPhone" placeholder="شماره تماس" autocomplete="off">
                                  </div>
                               </div>
-                              <!-- <div class="col-12">
-                                 <div class="form_group">
-                                    <select name="conService" id="conService" class="tj-nice-select">
-                                       <option value="" selected="" disabled="">نوع خدمات</option>
-                                       <option value="braning">طراحی برندینگ</option>
-                                       <option value="web">طراحی سایت</option>
-                                       <option value="uxui">طراحی /UX</option>
-                                       <option value="app">طراحی اپلیکیشن</option>
-                                    </select>مهارت ها
-                                 </div>
-                              </div> -->
+                           
                               <div class="col-12">
                                  <div class="form_group">
-                                    <textarea name="conMessage" id="conMessage" placeholder="متن"></textarea>
+                                    <textarea name="sub" id="conMessage" placeholder="متن"></textarea>
                                  </div>
                               </div>
                               <div class="col-12">
@@ -807,13 +817,6 @@
                            </div>
                         </li>
                         <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight" data-wow-delay=".6s">
-                           <!-- <div class="icon-box">
-                              <i class="flaticon-location"></i>
-                           </div> -->
-                           <!-- <div class="text-box">
-                              <p>آدرس</p>
-                              <a href="#">گیشای غربی کوچه 38,  <br>فاز 57, تهران</a>
-                           </div> -->
                         </li>
                      </ul>
                   </div>
@@ -822,6 +825,10 @@
          </div>
       </section>
       
+
+
+
+
 
 
       <div class="modal contact_modal" id="message_sent" tabindex="-1">

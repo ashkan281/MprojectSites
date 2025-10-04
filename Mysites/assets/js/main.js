@@ -389,21 +389,21 @@ Description: Gerold - Personal Portfolio HTML5 Template
 			});
 		}
 
-		// Form Validation
-		/* contact form */
-		if ($("#contact-form").length > 0) {
+		//  Form Validation
+		//  contact form */
+		 if ($("#contact-form").length > 0) {
 			$("#contact-form").validate({
-				rules: {
-					conName: "required",
-					conEmail: {
+		 		rules: {
+					name: "required",
+		 			email: {
 						required: true,
 						email: true,
 					},
 				},
 
 				messages: {
-					conName: "نام خود را وارد کنید",
-					conEmail: "ایمیل معتبر وارد نمایید",
+					name: "نام خود را وارد کنید",
+					email: "ایمیل معتبر وارد نمایید",
 				},
 				submitHandler: function (form) {
 					// start ajax request

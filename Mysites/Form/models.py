@@ -5,15 +5,15 @@ from django import forms
 
 
 class message(models.Model):
-    name = models.CharField(max_length=10)
-    namefamily = models.CharField(max_length=10)
-    email = models.EmailField()
-    number = models.CharField(max_length=15)
-    sub = models.CharField()
+    conName = models.CharField(max_length=10)
+    conLName = models.CharField(max_length=10, blank=True, null=True)
+    conEmail = models.EmailField()
+    conPhone = models.CharField(max_length=15)
+    conMessage = models.CharField(max_length=255, null=False, blank=False)
     
     
     
     def __str__(self):
-        return f"{self.name}  {self.namefamily}"
+        return self.conName
     
     

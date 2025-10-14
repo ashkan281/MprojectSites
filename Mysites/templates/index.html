@@ -1,4 +1,5 @@
 ﻿{% load static %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="fa" dir="rtl">
 
@@ -208,10 +209,11 @@
                         <div class="active-bg"></div>
                      </div>
                </div>
+               
                   <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
                      <div class="portfolio-sizer"></div>
                      <div class="gutter-sizer"></div>
-                     {% for show in formproject%}
+                     {% for show in formproject %}
                      <div class="portfolio-item branding">
                         <div class="image-box">
                            <img src="{{ show.image.url }}" alt="">
@@ -223,7 +225,7 @@
                            <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
                         </div>
                      </div>
-                     {%endfor %}
+                     {% endfor %}
                </div>
 
             </div>

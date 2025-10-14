@@ -6,6 +6,7 @@ from django.contrib import messages
 
 
 def show_home(request):
+    
     success_message = None
     error_message = None
     if request.method == "POST":
@@ -37,12 +38,8 @@ def show_home(request):
         except Exception as e:
             error_message = 'خطا در ارسال پیام'
             
-    return render(request, 'index.html', {
-        'success_message': success_message,
-        'error_message': error_message
-    })
-    
-    
     formproject = FormProject.objects.all()
-    return render(request , 'index.html' , context={'formproject' : formproject})
-
+    return render(request , 'index.html' , context={'formproject' : formproject ,'success_message': success_message , 'error_message': error_message,} )
+        
+        
+    

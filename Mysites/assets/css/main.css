@@ -946,7 +946,7 @@ body.loaded {
 * ===============================
 */
 .hero-section {
-	/* padding: 200px 0 50px; */
+	padding: 200px 0 50px;
 	background: var(--tj-theme-accent-1);
 	position: relative;
 	overflow: hidden;
@@ -994,10 +994,10 @@ body.loaded {
 }
 .hero-section .intro_text svg text {
 	text-transform: uppercase;
-	animation: stroke 4s;
+	/* animation: stroke 4s; */
 	stroke-width: 1.2;
 	stroke: var(--tj-theme-secondary);
-	fill: transparent;	
+	fill: transparent;
 	font-size: 240px;
 	display: inline-block;
 	opacity: 0;
@@ -1006,7 +1006,7 @@ body.loaded {
 .hero-section .intro_text svg text.animate-stroke {
 	animation: stroke 4s; /* Adjust the duration as needed */
 	opacity: 0.7;
-} 
+}
 @keyframes stroke {
 	0% {
 		stroke-dashoffset: 25%;
@@ -1316,11 +1316,10 @@ body.loaded {
 * ===============================
 */
 .portfolio-section {
-	padding-top: 10px;
+	padding-top: 120px;
 	padding-bottom: 80px;
 	background: var(--tj-theme-accent-1);
 }
-
 .portfolio-section .section-header {
 	margin-left: auto;
 	margin-right: auto;
@@ -3565,4 +3564,3 @@ body.absolute_header .breadcrumb_area {
 }
 
 /* END: Modal CSS */
-

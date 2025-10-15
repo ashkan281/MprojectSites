@@ -34,7 +34,7 @@
             <div class="col-12 d-flex flex-wrap align-items-center">
                <div class="logo-box">
                   <a href="index.html">
-                     <img src="assets/img/logo/logo.png" alt="">
+                     <img src="{% static "img/logo/logo.png" %}" alt="">
                   </a>
                </div>
 
@@ -74,7 +74,7 @@
             <div class="col-12 d-flex flex-wrap align-items-center">
                <div class="logo-box">
                   <a href="index.html">
-                     <img src= "assets/img/logo/logo.png" alt="">
+                     <img src= "{% static "img/logo/logo.png" %}" alt="">
                   </a>
                </div>
 
@@ -95,9 +95,7 @@
                   </nav>
                </div>
 
-               {% comment %} <div class="header-button">
-                  <a href="#" class="btn tj-btn-primary">تماس با من</a>
-               </div> {% endcomment %}
+               {
 
                <div class="menu-bar d-lg-none">
                   <button>
@@ -134,7 +132,7 @@
                         
 
                      <div class="hero-image-box d-md-none text-center">
-                        <img src="assets/js/smooth-scroll.js" alt="">
+                        <img src="{% static 'img/hero/ashkanresize.png' %}" alt="ashkan">
                      </div>
 
                      <p class="lead">
@@ -147,7 +145,7 @@
                </div>
                <div class="col-md-6 d-none d-md-block">
                   <div class="hero-image-box text-center">
-                     <img src="assets/img/hero/ashkanresize.png" alt="">
+                     <img src="{% static "img/hero/ashkanresize.png" %}" alt="">
                   </div>
                </div>
             </div>
@@ -299,7 +297,7 @@
                      <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="assets/img/icons/network2.svg" alt="">
+                              <img src="{% static "img/icons/network2.svg" %}" alt="">
                            </div>
                            <div class="number">70%</div>
                         </div>
@@ -308,7 +306,7 @@
                      <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="assets/img/icons/linux.svg" alt="">
+                              <img src="{% static "img/icons/linux.svg" %}" alt="">
                            </div>
                            <div class="number">50%</div>
                         </div>
@@ -317,7 +315,7 @@
                      <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="assets/img/icons/cloud.svg" alt="">
+                              <img src="{% static "img/icons/cloud.svg" %}" alt="">
                            </div>
                            <div class="number">60%</div>
                         </div>
@@ -326,7 +324,7 @@
                      <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="assets/img/icons/python.svg" alt="">
+                              <img src="{% static "img/icons/python.svg" %}" alt="">
                            </div>
                            <div class="number">70%</div>
                         </div>
@@ -335,7 +333,7 @@
                      <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="assets/img/icons/github.svg" alt="">
+                              <img src="{% static "img/icons/github.svg" %}" alt="">
                            </div>
                            <div class="number">50%</div>
                         </div>
@@ -344,7 +342,7 @@
                      <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="assets/img/icons/ccna.svg" alt="">
+                              <img src="{% static "img/icons/ccna.svg" %}" alt="">
                            </div>
                            <div class="number">50%</div>
                         </div>
@@ -353,7 +351,7 @@
                      <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="assets/img/icons/output.svg" alt="">
+                              <img src="{% static "img/icons/output.svg" %}" alt="">
                            </div>
                            <div class="number">40%</div>
                         </div>
@@ -385,7 +383,7 @@
                   <div class="blog-item wow fadeInUp" data-wow-delay=".5s">
                      <div class="blog-thumb">
                         
-                           <img src="assets/img/blog/arvan2.jpg" alt="">
+                           <img src="{% static "img/blog/arvan2.jpg" %}" alt="">
                      </div>
 
                      <div class="blog-content">
@@ -403,7 +401,7 @@
                <div class="col-lg-4 col-md-6">
                   <div class="blog-item wow fadeInUp" data-wow-delay=".6s">
                      <div class="blog-thumb">
-                           <img src= "assets/img/blog/mcse1.jpg" alt="">
+                           <img src= "{% static "img/blog/mcse1.jpg" %}" alt="">
                      </div>
                      <div class="blog-content">
                         <div class="blog-meta">
@@ -418,7 +416,7 @@
                <div class="col-lg-4 col-md-6">
                   <div class="blog-item wow fadeInUp" data-wow-delay=".7s">
                      <div class="blog-thumb">
-                           <img src="assets/img/blog/network1.jpg" alt="">
+                           <img src="{% static "img/blog/network1.jpg" %}" alt="">
                      </div>
                      <div class="blog-content">
                         <div class="blog-meta">

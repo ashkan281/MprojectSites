@@ -56,6 +56,15 @@
                <div class="header-button">
                   <a href="#contact-section" class="btn tj-btn-primary">تماس با من</a>
                </div>
+
+               <div class="header-button">
+               {% if request.user.is_authenticated%}
+                <a href="" class="btn tj-btn-primary">{{ request.user.first_name}} </a>
+                {% else %}
+                <a href="/login" class="btn tj-btn-primary">ورود / عضویت</a>
+                {% endif %}
+               </div>
+               
                <div class="menu-bar d-lg-none">
                   <button>
                      <span></span>
@@ -208,6 +217,8 @@
                   <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
                      <div class="portfolio-sizer"></div>
                      <div class="gutter-sizer"></div>
+
+
                      {% for show in formproject %}
                      <div class="portfolio-item branding">
                         <div class="image-box">
@@ -221,6 +232,8 @@
                         </div>
                      </div>
                      {% endfor %}
+
+                     
                </div>
 
             </div>
@@ -291,16 +304,20 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
+
+                     {% for show_icon in Change_icon%}
                      <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
                         <div class="skill-inner">
                            <div class="icon-box">
-                              <img src="{% static "img/icons/network2.svg" %}" alt="">
+                              <img src="{{ show_icon.images.url }}" alt="">
                            </div>
-                           <div class="number">70%</div>
+                           <div class="number">{{ show_icon.number }}</div>
                         </div>
-                        <p>network plus </p>
+                        <p>{{ show_icon.description }}</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
+                     {% endfor%}
+
+                     {% comment %} <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
                         <div class="skill-inner">
                            <div class="icon-box">
                               <img src="{% static "img/icons/linux.svg" %}" alt="">
@@ -353,7 +370,10 @@
                            <div class="number">40%</div>
                         </div>
                         <p>django</p>
-                     </div>
+                     </div> {% endcomment %}
+
+
+
                   </div>
                </div>
             </div>

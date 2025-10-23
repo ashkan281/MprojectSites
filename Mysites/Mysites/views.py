@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from projects_app.models import FormProject
-from Form.models import message
+from projects_app.models import FormProject 
+from change_icon.models import change_icon
+from Form.models import Message
 from django.http import HttpResponse
 from django.contrib import messages
 
@@ -25,7 +26,7 @@ def show_home(request):
                 })
             
             # ذخیره در دیتابیس
-            message.objects.create(
+            Message.objects.create(
                 conName=conName,
                 conLName=conLName,
                 conEmail=conEmail,
@@ -39,7 +40,8 @@ def show_home(request):
             error_message = 'خطا در ارسال پیام'
             
     formproject = FormProject.objects.all()
-    return render(request , 'index.html' , context={'formproject' : formproject ,'success_message': success_message , 'error_message': error_message,} )
+    Change_icon = change_icon.objects.all()
+    return render(request , 'index.html' , context={'Change_icon': Change_icon,'formproject' : formproject ,'success_message': success_message , 'error_message': error_message,} )
         
         
     

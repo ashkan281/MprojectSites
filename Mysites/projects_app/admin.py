@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import FormProject \
+from .models import FormProject 
 # Register your models here.
 
 

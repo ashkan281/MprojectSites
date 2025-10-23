@@ -4,16 +4,15 @@ from django import forms
 # Create your models here.
 
 
-class message(models.Model):
+class Message(models.Model):
     conName = models.CharField(max_length=10)
     conLName = models.CharField(max_length=10, blank=True, null=True)
-    conEmail = models.EmailField()
+    conEmail = models.EmailField(max_length=255)
     conPhone = models.CharField(max_length=15)
-    conMessage = models.CharField(max_length=255, null=False, blank=False)
-    
-    
-    
+    conMessage = models.CharField(max_length=255)
+
     def __str__(self):
-        return self.conName
+        return f"{self.conName} {self.conLName}"
     
     
+

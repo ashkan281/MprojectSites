@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'projects_app',
     'Form',
     'login_page',
+    'change_icon',
     
 ]
 
@@ -66,6 +67,16 @@ WSGI_APPLICATION = 'Mysites.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ashkanpo_personsite',
+#         'USER': 'ashkanpo_admin_db',
+#         'PASSWORD': '2818723As@',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
